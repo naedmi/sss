@@ -19,7 +19,7 @@ def conv(_):
 
 def read(path):
     return np.genfromtxt((conv(_) for _ in open(path)), delimiter=';',
-                         dtype=np.double, skip_header=300, skip_footer=50, usecols=1)  # how many entries?
+                         dtype=np.double, skip_header=300, skip_footer=50, usecols=1)
 
 
 # umkehrung
@@ -37,15 +37,14 @@ if __name__ == '__main__':
         std.append(np.std(values))
 
     # calculate logarithms
-    log_x, log_y = np.log(x), np.log(y)
+    log_volt, log_dist = np.log(y), np.log(x)
 
     # calculate linear regression
-    result = stats.linregress(log_x, log_y)
-    x1 = np.linspace(np.min(log_x), np.max(log_x), 21)
+    result = stats.linregress(log_volt, log_dist)
+    x1 = np.linspace(np.min(log_volt), np.max(log_volt), 21)
     a = result.slope
     b = result.intercept
     y1 = result.slope * x1 + result.intercept  # slope -> gradient
-
 
     # 1st plot - characteristic curve
     plt.title('Kennlinie')
@@ -70,15 +69,15 @@ if __name__ == '__main__':
     plt.title('Logarithmierte Werte')
     plt.xlabel('(logarithmierter) Abstand [cm]')
     plt.ylabel('(logarithmierte) Spannung [V]')
-    plt.plot(log_x, log_y)
+    plt.plot(log_volt, log_dist)
     plt.savefig('plots/log.png')
     plt.show()
 
     # 4th plot - linear regression
     plt.title('Lineare Regression - Ausgleichsgerade')
-    plt.xlabel('(logarithmierter) Abstand [cm]')
-    plt.ylabel('(logarithmierte) Spannung [V]')
-    plt.plot(log_x, log_y, 'ob')
+    plt.ylabel('(logarithmierter) Abstand [cm]')
+    plt.xlabel('(logarithmierte) Spannung [V]')
+    plt.plot(log_volt, log_dist, 'ob')
     plt.plot(x1, y1, '-r')
     plt.savefig('plots/linear-regression.png')
     plt.show()
@@ -90,7 +89,7 @@ if __name__ == '__main__':
     a4_width = read(f'data/a4-breit.csv')
     a4_width_mean = np.mean(a4_width)
 
-    std = np.std(a4_length) / len(a4_length)
+    std = np.std(a4_length) / math.sqrt(len(a4_length))  # Standardabweichung / Wurzel(n)
     print(f'std = {std}\n')
     print(f'68.26%: result is between {a4_length_mean - std} V and {a4_length_mean + std} V')
     print(f'95%: result is between {a4_length_mean - 1.96 * std} V and {a4_length_mean + 1.96 * std} V\n')
@@ -100,7 +99,7 @@ if __name__ == '__main__':
 
     print('---------------------------------------------------------------------------------------')
 
-    std = np.std(a4_width) / len(a4_width)
+    std = np.std(a4_width) / math.sqrt(len(a4_width))  # Standardabweichung / Wurzel(n)
     print(f'std = {std}\n')
     print(f'68.26%: result is between {a4_width_mean - std} V and {a4_width_mean + std} V')
     print(f'95%: result is between {a4_width_mean - 1.96 * std} V and {a4_width_mean + 1.96 * std} V\n')
@@ -112,5 +111,5 @@ if __name__ == '__main__':
 
     length_dist = f(a4_length_mean)
     width_dist = f(a4_width_mean)
-    print("Fläche: x = %f +- %f [cm^2]" % (length_dist * width_dist, math.sqrt((length_dist * length_err) ** 2
-                                                                               + (width_dist * width_err) ** 2)))
+    print("Fläche: x = %f +- %f [cm^2]" % (length_dist * width_dist, math.sqrt((width_dist * length_err) ** 2
+                                                                               + (length_dist * width_err) ** 2)))
