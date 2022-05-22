@@ -52,8 +52,8 @@ if __name__ == '__main__':
 
     # Plot Amplitude Bodediagramm großer Lautsprecher
     plt.figure(3)
-    # plt.plot(freq, grossAmp, 'y', label = 'big speaker')
-    # plt.plot(freq, kleinAmp, 'r', label = 'little speaker')
+    plt.plot(freq, grossAmp, 'y', label='big speaker')
+    plt.plot(freq, kleinAmp, 'r', label='little speaker')
     plt.semilogx(freq, grossAmp, 'b')
     plt.semilogx(freq, kleinAmp, 'r')
     plt.title("Bode-Amplitude")
@@ -64,8 +64,8 @@ if __name__ == '__main__':
 
     # Plot Phasengang Bodediagramm kleiner Lautsprecher
     plt.figure(4)
-    # plt.plot(freq, grossPhase, 'y', label = 'big speaker')
-    # plt.plot(freq, kleinPhase, 'r', label = 'little speaker')
+    plt.plot(freq, grossPhase, 'y', label='big speaker')
+    plt.plot(freq, kleinPhase, 'r', label='little speaker')
     plt.semilogx(freq, grossPhase, 'b')
     plt.semilogx(freq, kleinPhase, 'r')
     plt.title("Bode-Phasengang")
