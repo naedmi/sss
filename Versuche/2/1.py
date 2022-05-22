@@ -50,14 +50,15 @@ def print_data(image, bounds, labels):
 
 
 labels = ["white","gray1","gray2","gray3", "black"]
+
     
-image = cv2.imread('./data/grauwertkeil0.png', 0)
+image = cv2.imread('./data/original.png', 0)
 bounds = extract_bounds(image)
 print("Grauwertkeil:")
 print_data(image, bounds, labels)
 
 
-image_corrected = cv2.imread('./data/grauwertkeil_korrigiert3.png', 0)
+image_corrected = cv2.imread('data/korrigiert.png', 0)
 bounds_corrected = extract_bounds(image_corrected)
 print("Grauwertkeil korrigiert:")
 print_data(image_corrected, bounds_corrected, labels)
