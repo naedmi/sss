@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-
-# Useful links
-# https://data36.com/linear-regression-in-python-numpy-polyfit/
-
 import numpy as np
 import matplotlib.pyplot as plt
 import helper

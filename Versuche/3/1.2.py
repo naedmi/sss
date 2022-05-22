@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import numpy as np
 import matplotlib.pyplot as plt
 import helper
@@ -38,7 +37,7 @@ if __name__ == '__main__':
     plt.ylabel('amplitude in V')
     plt.xlabel('frequency in kHz')
     plt.grid(True)
-    plt.savefig('data/spectrum_harmonica.png')
+    plt.savefig('plots/spectrum_harmonica.png')
     plt.show()
 
     print()

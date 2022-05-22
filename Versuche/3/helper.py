@@ -2,7 +2,7 @@ import numpy as np
 
 
 def decconv(col_num):
-    conv = dict((col, lambda valstr: \
+    conv = dict((col, lambda valstr:
                 float(valstr.decode('utf-8').replace(',', '.'))) for col in range(col_num))
     return conv
 
