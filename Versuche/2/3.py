@@ -94,5 +94,5 @@ def correct():
 
 if __name__ == '__main__':
     create_white_frame()
-    # correct_white_frame()
-    # correct()
+    correct_white_frame()
+    correct()
