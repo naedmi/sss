@@ -12,10 +12,10 @@ if __name__ == '__main__':
                        for x in range(0, len(data.amplitude_small))]
 
     # −∆t * f * 360
-    _phaseShiftLarge = [(data.phase_shift_big[x] * -1) * data.freq[x] * 360
+    _phaseShiftLarge = [(data.phase_shift_big[x]/1000000 * -1) * data.freq[x] * 360
                         for x in range(0, len(data.phase_shift_big))]
 
-    _phaseShiftSmall = [(data.phase_shift_small[x] * -1) * data.freq[x] * 360
+    _phaseShiftSmall = [(data.phase_shift_small[x]/1000000 * -1) * data.freq[x] * 360
                         for x in range(0, len(data.phase_shift_small))]
 
     plt.plot(data.freq, _amplitudeSmall, 'b', label='small speaker')
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     plt.plot(data.freq, _phaseShiftSmall, 'b', label='small speaker')
     plt.plot(data.freq, _phaseShiftLarge, 'y', label='big speaker')
     plt.title('Bode Phase-Shift')
-    plt.ylabel('phase shift in µsec')
+    plt.ylabel('phase shift in °')
     plt.xlabel('frequency in Hz')
     plt.grid(True)
     plt.semilogx()
