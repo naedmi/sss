@@ -14,30 +14,34 @@ if __name__ == '__main__':
     interval_us = round(interval * 1000, 3)
     interval_s = round(interval / 1000, 6)
 
-    # Die zweite Spalte der .csv Datei wird Fouriertransformiert
-    fourier = np.fft.fft(data[:, 1])
-    # Die Fouriertransformierte Frequenz wird absolutiert, so dass kein negativer Wert mehr vorzufinden ist
-    spectrum = np.abs(fourier)
-    # Formel, um die Anzahl der Schwingungen in die Frequenz umzurechnen: f = n / (M * Δt)
-    freq = range(0, len(spectrum), 1) / (len(data) * interval_s)
+    fourier = np.fft.fft(data[:, 1])  # Fouriertransformation
+    spectrum = np.abs(fourier)  # Fouriertransformierte Frequenz absolutieren -> keine negativen Werte
+    freq = range(0, len(spectrum), 1) / (len(data) * interval_s)  # Anzahl der Schwingungen
+    # in die Frequenz umzurechnen: f = n / (M * Δt)
 
     x_line = np.zeros(1000)
     y_line = np.zeros(1000)
+    zeroCrossing = helper.find_zero_crossing(y_line, 1000)  # Nulldurchgänge
 
     # Grundperiode und Grundfrequenz
-    zeroCrossing = helper.find_zero_crossing(y_line, 1000)  # Ermittelt Nulldurchgänge
-
-    period = 282 - 36
+    period = 246
     basic_period = period * interval_ms  # Grundperiodenlänge in ms
     basic_frequency = 1 / (period * interval_s)  # Grundfrequenz
 
     # Darstellung des Amplitudenspektrums
     plt.plot(freq / 1e3, spectrum)
-
     plt.ylabel('amplitude in V')
     plt.xlabel('frequency in kHz')
     plt.grid(True)
     plt.savefig('plots/spectrum_harmonica.png')
+    plt.show()
+
+    # Teil 2
+    plt.plot((freq / 1e3)[0:400], spectrum[0:400], 'r')
+    plt.ylabel('amplitude in V')
+    plt.xlabel('frequency in kHz')
+    plt.grid(True)
+    plt.savefig('plots/spectrum_harmonica_zoom.png')
     plt.show()
 
     print()
@@ -52,5 +56,3 @@ if __name__ == '__main__':
     # -------------------------------------------------------------------------- Part 2
     print("Frequenz mit der größten Amplitude", np.max(spectrum))
     print()
-
-    print("Process successfully done")
