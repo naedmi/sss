@@ -30,5 +30,5 @@ def main(file_name, word):
     plt.show()
 
 
-if __name__ == "__main__":
-    main('recording_20220609_202615', 'test')
+if __name__ == '__main__':
+    main('reference_hoch', 'hoch')

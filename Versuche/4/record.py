@@ -14,7 +14,7 @@ def trigger(array):
 if __name__ == "__main__":
     # datetime object containing current date and time
     now = datetime.now()
-    dt_string = now.strftime("%Y%m%d_%H%M%S")
+    dt_string = now.strftime('%Y%m%d_%H%M%S')
 
     FORMAT = pyaudio.paInt16
     SAMPLEFREQ = 44100
@@ -40,6 +40,8 @@ if __name__ == "__main__":
 
     plt.plot(decoded)
     plt.title('with trigger')
-    plt.savefig(f'plots/recording_{dt_string}.png')
-    np.save(f'data/recording_{dt_string}', decoded)
+    # plt.savefig(f'plots/recording_{dt_string}.png')
+    # np.save(f'data/recording_{dt_string}', decoded)
+    # plt.savefig(f'plots/recording_tief_5.png')
+    np.save(f'data/test/recording_tief_5', decoded)  # .npy file
     plt.show()
