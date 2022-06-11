@@ -43,5 +43,5 @@ if __name__ == "__main__":
     # plt.savefig(f'plots/recording_{dt_string}.png')
     # np.save(f'data/recording_{dt_string}', decoded)
     # plt.savefig(f'plots/recording_tief_5.png')
-    np.save(f'data/test/recording_tief_5', decoded)  # .npy file
+    np.save(f'data/test/recording_rechts_5_flo', decoded)  # .npy file
     plt.show()
