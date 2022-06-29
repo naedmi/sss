@@ -1,7 +1,12 @@
-venv
-<<<<<<< HEAD
-__pycache_
-.idea
-=======
-__pycache__
->>>>>>> 5030f71a75cef473a41c3ab459cebef3300013e9
+### PyCharm ###
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+*.pyc
+
+### Obsidian ###
+# config dir
+.obsidian/
