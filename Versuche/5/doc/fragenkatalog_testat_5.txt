@@ -1,0 +1,54 @@
+Fragenkatalog Testat 5
+======================
+
+1. Wie beschreibt man mathematisch die Abtastung eines Signals g(t) zum Zeitpunkt t1?
+
+2. Wie sieht das Spektrum einer mit Abtastintervall 1 abgetasteten Funktion mit Spektrum 
+G(omega) aus?
+
+3. Wie verändert sich das Spektrum einer Kammfunktion, wenn man das Abtastintervall 
+verdreifacht?
+
+4. Unter welchen Bedingungen entsteht Aliasing?
+
+5. Wie funktioniert das Sägezahnverfahren bei der A/D-Wandlung?
+
+6. Welche scheinbare Frequenz hat ein Sinussignal der Frequenz f0, wobei f0 größer als die 
+Nyquistfrequenz, aber kleiner als die Abtastfrequenz f1 ist?
+
+7. Was ist Aliasing?
+
+8. Wie schafft man es, die Fouriertransformierte eines diskreten Signals im Computer zu #
+berechnen, obwohl seine Fouriertransformierte kontinuierlich ist?
+
+9. Ist die diskrete Fouriertransformation und die Fouriertransformation bei zeitdiskreten 
+Signalen das Gleiche?
+
+10. Was ist ein FIR-Filter?
+
+11. Was ist ein FFT-Filter?
+
+12. Wieviele Fourierkoeffizienten hat die Fourierreihe eines diskreten Signals, das aus 8 
+Abtastpunkten besteht?
+
+13. Warum braucht man bei diskreten periodischen Signalen nur endliche Fourierreihen zu 
+ihrer Darstellung?
+
+14. Was sind die Unterschiede zwischen den Analysegleichungen der diskreten und 
+kontinuierlichen Fourierreihe?
+
+15. Warum reicht bei diskreten linearen Systemen die Antwort auf einen Einheitsimpuls zum 
+Zeitpunkt 0, um es vollständig zu charakterisieren?
+
+16. Wie berechnet man die Systemantwort eines diskreten linearen Systems?
+
+17. Was ist der Hauptunterschied zwischen dem Spektrum eines aperiodischen 
+kontinuierlichen Signals und dem eines aperiodischen diskreten Signals?
+
+18. Wie sieht ein idealer zeitdiskreter Tiefpass im Spektralraum aus?
+
+19. Ein zeitdiskreter Filter besteht aus der Differenz des momentanen Inputwertes und des 
+Inputwertes des vergangenen Zeitschritts. Um was für eine Art von Filter handelt es sich?
+
+20. Ist eine zeitdiskrete Sinusschwingung immer periodisch?
+
