@@ -8,12 +8,12 @@ def windowing(data):
     step = 256
 
     sub = [data[i: i + size] for i in range(0, len(data), step)]  # divide
-    gaus = signal.windows.gaussian(512, 512 / 4)  # gausssche fensterfunktion
+    gaus = signal.windows.gaussian(512, 512 / 4)  # gaussian window func
 
     windows10 = [np.concatenate((np.zeros(i * 256), np.array(gaus * sub[i]),
                                  np.zeros((len(sub) - 1 - i) * 256))) for i in range(0, len(sub) - 2)]
 
-    ffts = [np.fft.rfft(i) for i in windows10]  # lokale fouriertransformation
+    ffts = [np.fft.rfft(i) for i in windows10]  # local fourier transform
     fft = np.abs(np.array(ffts).mean(0))
     return fft
 

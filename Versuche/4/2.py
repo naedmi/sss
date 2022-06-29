@@ -55,14 +55,12 @@ def print_correlation():
     print('links ' + str(stats.pearsonr(data, np.load('data/refs/reference_links.npy'))))
     print('--------------------------------')
 
-    # TODO: aufnahmen anderer person testen
 
-
-def spracherkenner():
+def voice_recog():
     hit = 0
     miss = 0
     data_nad = [0, 0]  # hit, miss
-    data_flo = [0, 0]
+    data_mav = [0, 0]
     for f in [f for f in os.listdir('data/test')]:
         if 'flo' not in f:  # sry flo
             val = eins.windowing(np.load(f'data/test/{f}'))
@@ -77,13 +75,13 @@ def spracherkenner():
             if fn[9:-4] in f:  # is result correct?
                 hit = hit + 1
                 if 'mav' in f:
-                    data_flo[0] = data_flo[0] + 1
+                    data_mav[0] = data_mav[0] + 1
                 else:
                     data_nad[0] = data_nad[1] + 1
             else:
                 miss = miss + 1
                 if 'mav' in f:
-                    data_flo[1] = data_flo[1] + 1
+                    data_mav[1] = data_mav[1] + 1
                 else:
                     data_nad[1] = data_nad[1] + 1
 
@@ -96,10 +94,10 @@ def spracherkenner():
 
     # person 2
     print('mav stats:')
-    print('2 hit:\t\t' + str(data_flo[0]))
-    print('2 miss:\t\t' + str(data_flo[1]))
+    print('2 hit:\t\t' + str(data_mav[0]))
+    print('2 miss:\t\t' + str(data_mav[1]))
     print('2 hit-rate:\t\t' +
-          str(round((data_flo[0] / (data_flo[0] + data_flo[1])) * 100, 3)) + '%\n')
+          str(round((data_mav[0] / (data_mav[0] + data_mav[1])) * 100, 3)) + '%\n')
 
     # total
     print('hit:\t\t\t' + str(hit))
@@ -111,4 +109,4 @@ if __name__ == '__main__':
     eins = __import__('1')
     # create_references()
     # print_correlation()
-    spracherkenner()
+    voice_recog()
