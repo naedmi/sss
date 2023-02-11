@@ -82,7 +82,7 @@ Gauß-Impulsfolge und warum?
 - möglichst breite Rechteckfunktion
 - Gaußfunktion mit kleiner Standardabweichung
 - Gabor-Wavelet
-* Die möglichst breite Rechteckfunktion. ???
+* Die Gaußfunktion mit kleiner Standardabweichung.
 
 20. Wie unterscheiden sich die Spektren von schnell und langsam veränderlichen Signalen?
 * Signale ohne schnelle Übergänge enthalten keine hohen Frequenzen. 

@@ -35,7 +35,6 @@ verdreifacht?
 5. Wie funktioniert das Sägezahnverfahren bei der A/D-Wandlung?
 * Das Sägezahnverfahren ist ein Zählverfahren: Man zählt solange die Anzahl der regelmäßig getakteten Impulse ab, bis eine Sägezahnspannung den Sample-and-Hold-Wert überschreitet. Die Zahl der gezählten Impulse ist das quantisierte Ergebnis.
 
-
 6. Welche scheinbare Frequenz hat ein Sinussignal der Frequenz f0, wobei f0 größer als die Nyquistfrequenz, aber kleiner als die Abtastfrequenz f1 ist?
 * Die Frequenz erscheint kleiner als die Nyquistfrequenz, und zwar f1 - f0.
 

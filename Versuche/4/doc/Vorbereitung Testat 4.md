@@ -15,12 +15,12 @@
 * Lesen Sie die Versuchsanleitung durch. Schauen Sie ggf. in den Unterlagen nach, falls etwas inhaltlich nicht klar sein sollte.
 
 ```
-Fragenkatalog zu Testat 3
+Fragenkatalog zu Testat 4
 ==========================
 
 
 1. Wie wirkt die Differentiation auf das Spektrum eines Signals?
-* Die Frequenz bleibt gleich, nur ihr Vertrag ändert sich um w und die Phase verschiebt sich um -pi/2.
+* Die Frequenz bleibt gleich, nur ihr Betrag ändert sich um w und die Phase verschiebt sich um -pi/2.
 
 2. Wie funktioniert die Faltung, um das Ausgangssignal eines Systems zur Zeit t zu 
 berechnen?
@@ -33,14 +33,14 @@ Dann wird sie punktweise mit dem Signal f(T) multipliziert und das Integral ergi
 * Der Amplitudengang ist eine Gerade mit der Steigung 1.
 
 4. Wie wirkt ein lineares System auf das Spektrum eines Signals?
-* Das Spektrum wird mit der Impulsantwort gefaltet. Ein- und Ausgangssignal sind sinusförmig.
+* Ein lineares System verändert die Frequenzen des Signals nicht.
 
 5. Was ist ein Bode-Diagramm?
 * Ein Bode-Diagramm zeigt zwei Funktionsgraphen:
 Ein Graph zeigt den Betrag (Amplitudenverstärkung), der andere zeigt das Argument (Phasenverschiebung) einer komplexwertigen Funktion in Abhängigkeit der Frequenz.
 
 6. Wie verändert der Phasengang eines linearen Systems die Phase des Eingangssignals?
-* Der Phasengang verschiebt das Eingangssignal. Meistens ist der Phasengang negativ, d.h. der Ausganz folgt verzögert dem Eingang.
+* Der Phasengang verschiebt das Eingangssignal. Meistens ist der Phasengang negativ, d.h. der Ausgang folgt verzögert dem Eingang.
 
 7. Wievielen Dezibel entspricht ein Verstärkungsfaktor von 100?
 * 40 dB.
@@ -56,12 +56,12 @@ Ein Graph zeigt den Betrag (Amplitudenverstärkung), der andere zeigt das Argume
 * Oszillierendes Einschwingen (kap. 14.18)
 
 10. Wie muss man den Frequenzgang eines Filters im Spektralraum verändern, damit sich die Impulsantwort in der Zeitdomäne verschiebt?
-* Man multipliziert den Frequenzgang mit einem Phasenfaktor e^-iwa
+* Man multipliziert den Frequenzgang mit einem Phasenfaktor e^(-iwa)
 
 11. Was ist das Faltungsintegral?
 * Das Faltungsintegral gibt an, wie für ein beliebiges Eingangssignal das zugehörige Ausgangssignal mit Hilfe der Impulsantwort berechnet werden kann.
 
-12. Wie kann man einen Vokal in einem Sprachsignal erkennen?
+12. Wie kann man ein Vokal in einem Sprachsignal erkennen?
 * Vokale sind fastperiodische Signalabschnitte. Sie werden durch eine lokale Form der Fourieranalyse erkennbar.
 
 13. Was ist ein Phonem?
@@ -75,7 +75,7 @@ beachten?
 * Wird ein kurzes Zeitfenster gewählt, lässt sich relativ genau zeitlich lokalisieren, wann ein relativ breites Band benachbarter Frequenzen wahrnehmbar ist.
 
 16. Wie funktioniert ein Nächste-Nachbar-Klassifikator?
-* Das zu klassifizierende Signal wird mit den jeweiligen Prototypen der Klassen verglichen. Der Klassifikator unterscheidet sich für die Klasse, zu deren Prototyp das Signal am ähnlichsten ist.
+* Das zu klassifizierende Signal wird mit den jeweiligen Prototypen der Klassen verglichen. Der Klassifikator entscheidet sich für die Klasse, zu deren Prototyp das Signal am ähnlichsten ist.
 
 17. Wie unterscheiden sich Korrelation und Kovarianz als Ähnlichkeitsmaß?
 * Die Korrelation hat den Nachteil, dass Signale mit hohem Mittelwert automatisch "ähnlicher" zu einander sind bzw. stärker korrelieren. Bei der Kovarianz wird dies ausgeglichen, in dem vorher der Mittelwert/das Integral bei beiden Signalen abgezogen wird.
