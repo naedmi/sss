@@ -1,0 +1,55 @@
+Fragenkatalog Testat 1
+======================
+
+
+1. Welche elektrische Größe misst ein Drehspul-Messwerk?
+
+2. Wie funktioniert ein Drehspulinstrument?
+
+3. Eine indirekte Messgröße A berechnet sich als Differenz zweier direkt gemessener 
+Eingangsgrößen B und C mit absolutem Messfehler ΔB bzw. ΔC, d.h. A = B - C. Wie groß 
+schätzen Sie den absoluten Messfehler ΔA?
+
+4. Sie haben eine indirekt gemessene Größe A, die von mehreren Eingangsgrößen B, C, D, ... 
+abhängt, die alle den gleichen Messfehler haben. Welche der Eingangsgrößen hat den größten 
+Einfluss auf den Messfehler von A?
+
+5. Was leistet die lineare Regression?
+
+6. Kann man die lineare Regression auch bei Kennlinien anwenden, die einem Gesetz der Form
+y = x ^ a folgen?
+
+7. Sie haben in Python eine 5 x 5 - Matrix a angelegt. Wie greifen Sie auf das zweite 
+Element der dritten Zeile zu?
+
+8. Ein Messintrument hat einen Anzeigefehler von 1% und einen Skalenendwert von 5 A. Im 
+Moment zeigt das Instrument einen Strom von 2 A an. In welchem Bereich liegt der wahre 
+Wert des Stroms?
+
+9. Auf der Anzeige Ihres analogen Messinstrumentes steht "KL 1.5". Was bedeutet das?
+
+10. Wie schätzt man den wahren Wert einer Messgröße, wenn mehrere fehlerbehaftete 
+Messungen vorliegen?
+
+11. Sie haben 20 Einzelmessungen mit einer Standardabweichung des Mittelwertes von s. Wie
+groß ist das Vertrauensintervall, in das der wahre Wert der Messgröße mit einer 
+Wahrscheinlichkeit von 95,5 % fällt?
+
+12. Warum muss man jede Messung mit dem größten Messbereich beginnen?
+
+13. Warum kann ein Drehspulinstrument nicht beliebig schnell veränderliche Ströme oder 
+Spannungen anzeigen?
+
+14. Was ist der Parallaxenfehler?
+
+15. Welches Messprinzip liegt dem im Praktikum eingesetzten Abstandssensor zugrunde?
+
+16. Zu was benützt man ein Oszilloskop?
+
+17. Wie funktioniert ein analoges Oszilloskop?
+
+18. Was ist der Unterschied zwischen einem Sensor und einem Messgerät?
+
+19. Was für ein Sensortyp ist der im Praktikum eingesetzte Abstandssensor?
+
+20. Wie funktioniert die Triggerung beim Oszilloskop?
